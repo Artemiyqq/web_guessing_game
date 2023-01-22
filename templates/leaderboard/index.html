@@ -1,0 +1,29 @@
+{% load static index %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="{% static 'leaderboard/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+</head>
+<body>
+    <div class="container">
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">Place</div>  
+                <div class="col col-1">Nickname</div>
+                <div class="col col-2">Score</div>
+            </li>
+            {% for name in nicknames %}
+                <li class="table-row">
+                    <div class="col col-1" data-label="Place">{{ forloop.counter }}</div>
+                    <div class="col col-2" data-label="Nickname">{{name}}</div>
+                    <div class="col col-3" data-label="Score">{{scores|index:forloop.counter0}}</div>
+                </li>
+            {% endfor %}
+            <button class="button button--pan"><span>RETURN</span></button>
+        </ul>
+    </div>
+</body>
+</html>
