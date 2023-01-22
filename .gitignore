@@ -1,1 +1,6 @@
 /web_guessing_game/.env
+/web_guessing_game/__pycache__/
+/account/__pycache__/
+/leaderboard/__pycache__/
+/play/__pycache__/
+/main_page/__pycache__/
