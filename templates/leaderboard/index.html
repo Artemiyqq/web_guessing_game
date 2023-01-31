@@ -22,7 +22,9 @@
                     <div class="col col-3" data-label="Score">{{scores|index:forloop.counter0}}</div>
                 </li>
             {% endfor %}
-            <button class="button button--pan"><span>RETURN</span></button>
+            <a href="{% url ''%}">
+                <button class="button button--pan"><span>RETURN</span></button>
+            </a>
         </ul>
     </div>
 </body>
