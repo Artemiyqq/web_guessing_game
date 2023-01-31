@@ -8,7 +8,7 @@ from account import views as account_views
 
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('', main_page_views.index),
+    path('', main_page_views.index, name=''),
     path('play', play_views.index, name='play'),
     path('leadeboard', leaderboard_views.index, name='leaderboard'),
     path('account', account_views.index, name='account'),
