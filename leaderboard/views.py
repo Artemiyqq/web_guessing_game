@@ -1,13 +1,13 @@
 from django.shortcuts import render
-from .models import Leaderboard
+from .models import User
 
 
 def index(request):
     nicknames = []
     scores = []
-    for mini_dic in Leaderboard.objects.order_by('player_score')[:5].values():
-        nicknames.append(mini_dic['player_name'])
-        scores.append(mini_dic['player_score'])
+    for mini_dic in User.objects.order_by('-score')[:5].values():
+        nicknames.append(mini_dic['name'])
+        scores.append(mini_dic['score'])
     while len(nicknames) < 5:
         nicknames.append('...')
         scores.append(0)

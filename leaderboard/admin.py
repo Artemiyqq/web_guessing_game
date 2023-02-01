@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Leaderboard
+from .models import User
 
 
-admin.site.register(Leaderboard)
+admin.site.register(User)
