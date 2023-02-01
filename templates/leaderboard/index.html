@@ -6,14 +6,15 @@
     <title>Leaderboard</title>
     <link rel="stylesheet" href="{% static 'leaderboard/style.css' %}">
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <meta name="viewport" content="initial-scale=1">
 </head>
 <body>
     <div class="container">
         <ul class="responsive-table">
             <li class="table-header">
                 <div class="col col-1">Place</div>  
-                <div class="col col-1">Nickname</div>
-                <div class="col col-2">Score</div>
+                <div class="col col-2">Nickname</div>
+                <div class="col col-3">Score</div>
             </li>
             {% for name in nicknames %}
                 <li class="table-row">
@@ -23,7 +24,7 @@
                 </li>
             {% endfor %}
             <a href="{% url ''%}">
-                <button class="button button--pan"><span>RETURN</span></button>
+                <button class="button"><span>RETURN</span></button>
             </a>
         </ul>
     </div>
