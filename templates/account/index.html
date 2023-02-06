@@ -12,25 +12,31 @@
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="#">
-			<h1>Create Account</h1>
+			<h1>Fill in the fields</h1>
 			<input type="text" placeholder="Name" />
 			<input type="password" placeholder="Password" />
 			<button>Sign Up</button>
 		</form>
+		<a href="{% url ''%}">
+			<button>Return</button>
+		</a>
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="#">
-			<h1>Sign in</h1>
+			<h1>Fill in the fields</h1>
 			<input type="text" placeholder="Name" />
 			<input type="password" placeholder="Password" />
 			<button>Sign In</button>
 		</form>
+		<a href="{% url ''%}">
+			<button>Return</button>
+		</a>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
 				<h1>Welcome Back!</h1>
-        <p>Sign In to be able to get on the leaderboard later</p>
+        		<p>Sign In to ensure that your points are stored</p>
 				<button class="ghost" id="signIn">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
