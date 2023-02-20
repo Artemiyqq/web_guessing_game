@@ -13,8 +13,17 @@
 	<div class="form-container sign-up-container">
 		<form action="#">
 			<h1>Fill in the fields</h1>
-			<input type="text" placeholder="Name" />
-			<input type="password" placeholder="Password" />
+			<div class="name-field">
+				<input type="text" minlength="6" maxlength="15" required placeholder="Name" id="sign-up-username" name="sign-up-username">
+			</div>
+			<div class="password-field">
+				<input type="password" minlength="6" maxlength="15" required placeholder="Password" id="sign-up-password"/>
+				<img src="{% static 'account/eye-icon.png' %}" id="sign-up-password-toggle">
+			</div>
+			<div class="repeat-password-field">
+				<input type="password" minlength="6" maxlength="15" required placeholder="Repeat the password" id="sign-up-repeat-password"/>
+				<img src="{% static 'account/eye-icon.png' %}" id="sign-up-repeat-password-toggle">
+			</div>
 			<button>Sign Up</button>
 		</form>
 		<a href="{% url ''%}">
@@ -24,8 +33,11 @@
 	<div class="form-container sign-in-container">
 		<form action="#">
 			<h1>Fill in the fields</h1>
-			<input type="text" placeholder="Name" />
-			<input type="password" placeholder="Password" />
+			<input type="text" placeholder="Name" id="sign-in-usgername"/>
+			<div class="password-field"> 
+				<input type="password" placeholder="Password" id="sing-in-password"/>
+				<img src="{% static 'account/eye-icon.png' %}" id="sing-in-toggle">
+			</div>
 			<button>Sign In</button>
 		</form>
 		<a href="{% url ''%}">
@@ -37,12 +49,12 @@
 			<div class="overlay-panel overlay-left">
 				<h1>Welcome Back!</h1>
         		<p>Sign In to ensure that your points are stored</p>
-				<button class="ghost" id="signIn">Sign In</button>
+				<button class="ghost" id="sign-in">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
 				<h1>Hello, Friend!</h1>
 				<p>Sign Up to be able to get on the leaderboard later</p>
-				<button class="ghost" id="signUp">Sign Up</button>
+				<button class="ghost" id="sign-up">Sign Up</button>
 			</div>
 		</div>
 	</div>

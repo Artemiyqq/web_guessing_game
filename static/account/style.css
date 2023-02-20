@@ -24,22 +24,16 @@ h2 {
 	text-align: center;
 }
 
-p {
-	font-size: 14px;
-	font-weight: 100;
-	line-height: 20px;
-	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
-}
-
-span {
-	font-size: 12px;
-}
-
 a {
 	display: flex;
 	justify-content: center;
 	text-decoration: none;
+}
+
+.name-field, .password-field, .repeat-password-field{
+	width: 100%;
+	display: flex;
+	margin-left: 10%;
 }
 
 button {
@@ -85,7 +79,7 @@ input {
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
-	width: 100%;
+	width: 90%;
 }
 
 .container {
@@ -209,3 +203,12 @@ input {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
+
+#sign-up-password-toggle, #sign-up-repeat-password-toggle, #sing-in-toggle{
+    cursor: pointer;
+    width: 20px;
+    height: 25px;
+    display: block;
+	margin: auto;
+	margin-left: 10px;
+  }
